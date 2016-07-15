@@ -25,7 +25,6 @@
  *  Fax:        +86-10-6561-5510
  *  Mail:       info@geek-zoo.com
  */
-
 function GZ_user_info($user_id)
 {
 	global $db,$ecs;

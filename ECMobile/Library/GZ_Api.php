@@ -73,7 +73,7 @@ abstract class GZ_Api
 
 	    /* 初始化session */
 	    include(EC_PATH . '/includes/cls_session.php');
-	    $sess = new GZ_session($GLOBALS['db'], $GLOBALS['ecs']->table('sessions'), $GLOBALS['ecs']->table('sessions_data'), 'ECS_ID', self::$session['sid']);
+	    $sess = new cls_session($GLOBALS['db'], $GLOBALS['ecs']->table('sessions'), $GLOBALS['ecs']->table('sessions_data'), 'ECS_ID', self::$session['sid']);
 
 	    define('SESS_ID', $sess->get_session_id());
 		

@@ -5,8 +5,8 @@ define('GZ_PATH', dirname(__FILE__));
 define('EC_PATH', dirname(GZ_PATH));
 
 // define('INIT_NO_SMARTY', true);
-
-require GZ_PATH.'/library/function.php';
+require GZ_PATH.'/Library/function.php';
+require GZ_PATH.'/Library/GZ_Api.php';
 
 spl_autoload_register('gz_autoload');
 
