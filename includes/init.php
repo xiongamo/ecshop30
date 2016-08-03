@@ -57,7 +57,7 @@ require(ROOT_PATH . 'data/config.php');
 
 if (defined('DEBUG_MODE') == false)
 {
-    define('DEBUG_MODE', 0);
+    define('DEBUG_MODE', 2);
 }
 
 if (PHP_VERSION >= '5.1' && !empty($timezone))
@@ -287,7 +287,7 @@ if ((DEBUG_MODE & 1) == 1)
 }
 else
 {
-    error_reporting(E_ALL ^ (E_NOTICE | E_WARNING)); 
+    error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
 }
 if ((DEBUG_MODE & 4) == 4)
 {
