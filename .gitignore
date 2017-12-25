@@ -2,3 +2,5 @@
 .DS_Store
 temp/*
 .idea
+install/
+images/
