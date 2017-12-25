@@ -23,12 +23,20 @@
         -webkit-align-items: center;
         align-items: center;
     }
+    .swiper-slide img{
+        max-width: 100%;
+        max-height: 100%;
+    }
     </style>
 <div class="swiper-container swiper1">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">{insert name='ads' id=1 num=1}</div>
-            <div class="swiper-slide">{insert name='ads' id=2 num=1}</div>
-            <div class="swiper-slide">{insert name='ads' id=3 num=1}</div>
+            <!--{foreach from=$ad item=value}-->
+            <div class="swiper-slide">
+                <a href="{$value.url}">
+                <img src="{$value.content}" >
+                </a>
+            </div>
+            <!--{/foreach}-->
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>

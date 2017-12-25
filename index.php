@@ -132,7 +132,7 @@ if (!$smarty->is_cached('index.dwt', $cache_id))
     if ($_CFG['index_ad'] == 'cus')
     {
         $sql = 'SELECT ad_type, content, url FROM ' . $ecs->table("ad_custom") . ' WHERE ad_status = 1';
-        $ad = $db->getRow($sql, true);
+        $ad = $db->getAll($sql);
         $smarty->assign('ad', $ad);
     }
 
