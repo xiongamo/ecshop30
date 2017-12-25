@@ -19,7 +19,7 @@ var process_request = "{$lang.process_request}";
 </div>
 <div class="nav-menu">
   <div class="wrap">
-    <div class="logo"><a href="../index.php" name="top"><img src="../images/logo.jpg" /></a></div>
+    <div class="logo"><a href="../index.php" name="top"><img src="{$logosrc}" /></a></div>
     <div id="mainNav" class="clearfix maxmenu">
       <div class="m_left">
       <ul>
