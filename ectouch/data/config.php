@@ -1,9 +1,9 @@
 <?php
 return array(
-    'DB_HOST'   => 'localhost',
-    'DB_USER'   => 'root',
-    'DB_PWD'   => 'root',
-    'DB_NAME'   => 'ecshop30',
+    'DB_HOST'   => '192.168.1.88',
+    'DB_USER'   => 'ecshop',
+    'DB_PWD'   => 'ecshop_web',
+    'DB_NAME'   => 'ecshop',
     'DB_PREFIX'   => 'ecs_',
     'DB_PORT'   => '3306',
     'DB_CHARSET'   => 'utf8',

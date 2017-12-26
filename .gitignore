@@ -4,3 +4,5 @@ temp/*
 .idea
 install/
 images/
+data/afficheimg/
+cache/

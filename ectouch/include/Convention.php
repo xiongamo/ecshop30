@@ -70,13 +70,13 @@ return array(
 	/* 数据库配置 */
 	'DB' => array(
 		'DB_TYPE' => 'mysql', // 数据库类型，一般不需要修改
-		'DB_HOST' => 'localhost', // 数据库主机，一般不需要修改
-		'DB_USER' => 'root', // 数据库用户名
-		'DB_PWD' => '', // 数据库密码
+		'DB_HOST' => '192.168.1.88', // 数据库主机，一般不需要修改
+		'DB_USER' => 'ecshop', // 数据库用户名
+		'DB_PWD' => 'ecshop_web', // 数据库密码
 		'DB_PORT' => 3306, // 数据库端口，mysql默认是3306，一般不需要修改
-		'DB_NAME' => 'ectouch_db', // 数据库名
+		'DB_NAME' => 'ecshop', // 数据库名
 		'DB_CHARSET' => 'utf8', // 数据库编码，一般不需要修改
-		'DB_PREFIX' => 'ect_', // 数据库前缀
+		'DB_PREFIX' => 'ecs_', // 数据库前缀
 		'DB_CACHE_ON' => false, // 是否开启数据库缓存，true开启，false不开启
 		'DB_CACHE_TYPE' => 'FileCache', // 缓存类型，FileCache或Memcache或SaeMemcache
 		'DB_CACHE_TIME' => 600, // 缓存时间,0不缓存，-1永久缓存,单位：秒

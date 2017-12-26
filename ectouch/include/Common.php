@@ -1614,3 +1614,48 @@ if (!function_exists('class_alias')) {
     }
 
 }
+
+/**
+ * 获取图片路径(不保存uplaod/images)
+ *
+ * @param string $img_uri 数据库存放的图片资源文件名
+ */
+if (! function_exists('get_img_url')){
+    function get_img_url($img_uri, $is_full = TRUE, $sub_dir = ''){
+        if (strpos($img_uri, "http://") !== false){
+            return $img_uri;
+        }
+
+        $img_url = get_domain().'/'.$img_uri;
+
+        return $img_url;
+        
+    }
+}
+
+/**
+ * 替换文章内容中图片为全路径
+ *
+ * @param string $content
+ * @return mixed
+ */
+if (! function_exists('get_full_content_img_url')){
+    function get_full_content_img_url($content){
+        $domain = get_domain();
+        return preg_replace_callback('{(<img[^>]+src\s*=\s*")(.*?)(".*?[^>]*>)}i', function($match){
+            return $match[1].$domain.$match[2].$match[3];
+        }, $content);
+    }
+}
+
+/**
+ * 去除文章内容中图片地址前面的域名
+ * @author chaokai@gz-zc.cn
+ */
+if(!function_exists('trip_content_domain_text')){
+    function trip_content_domain_text($content){
+        $domain = get_domain();
+        return str_replace($dmoain, '', $content);
+        
+    }
+}

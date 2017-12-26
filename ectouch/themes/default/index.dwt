@@ -12,10 +12,17 @@
       </ul>
     </div>
     <div class="bd">
-      {insert name='ads' id=1 num=3}
+      <ul>
+      <!-- {foreach from=$ad_list item=value} -->
+      <li>
+      <a href="{$value.url}">
+        <img src="{$value.content}" style="width:100%;">
+      </a>
+      </li>
+      <!-- {/foreach} -->
+      </ul>
     </div>
   </div>
-  <div style="text-align: center;padding: 5px 0 18px;"><img src="__TPL__/images/logo.png" style="width:68%" /></div>
   <!--首页快速导航-->
   <nav class="container-fluid">
     <ul class="row ect-row-nav">

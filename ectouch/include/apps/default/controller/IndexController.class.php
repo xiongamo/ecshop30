@@ -40,6 +40,9 @@ class IndexController extends CommonController {
         $this->assign('categories', model('CategoryBase')->get_categories_tree());
         // 获取品牌
         $this->assign('brand_list', model('Brand')->get_brands($app = 'brand', C('page_size'), 1));
+        //轮播广告
+        $this->assign('ad_list', model('Adcustom')->get_home_ad());
+
         $this->display('index.dwt');
     }
 
