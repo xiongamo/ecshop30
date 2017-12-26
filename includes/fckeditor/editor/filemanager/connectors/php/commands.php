@@ -279,6 +279,9 @@ function FileUpload( $resourceType, $currentFolder, $sCommand )
     $sFileUrl = CombinePaths( GetResourceTypePath( $resourceType, $sCommand ) , $currentFolder ) ;
     $sFileUrl = CombinePaths( $sFileUrl, $sFileName ) ;
 
+    $domain = 'http://'.$_SERVER['SERVER_NAME'].'/';
+    $sFileUrl = $domain.$sFileUrl;
+
     SendUploadResults( $sErrorNumber, $sFileUrl, $sFileName ) ;
 
     exit ;
