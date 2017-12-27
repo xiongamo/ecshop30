@@ -62,7 +62,7 @@ define('ROOT_PATH', str_replace(ADMIN_PATH . '/includes/init.php', '', str_repla
 
 if (defined('DEBUG_MODE') == false)
 {
-    define('DEBUG_MODE', 0);
+    define('DEBUG_MODE', 2);
 }
 
 if (PHP_VERSION >= '5.1' && !empty($timezone))

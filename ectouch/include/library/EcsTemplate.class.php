@@ -73,8 +73,8 @@ class EcsTemplate {
      * @return  void
      */
     function display($filename, $cache_id = '') {
-        $this->_seterror++;
-        error_reporting(E_ALL ^ E_NOTICE);
+        // $this->_seterror++;
+        // error_reporting(E_ALL ^ E_NOTICE);
 
         $this->_checkfile = false;
         $out = $this->fetch($filename, $cache_id);
@@ -88,8 +88,8 @@ class EcsTemplate {
             }
             $out = implode('', $k);
         }
-        error_reporting($this->_errorlevel);
-        $this->_seterror--;
+        // error_reporting($this->_errorlevel);
+        // $this->_seterror--;
 
         echo $out;
     }
@@ -104,10 +104,10 @@ class EcsTemplate {
      * @return  sring
      */
     function fetch($filename, $cache_id = '') {
-        if (!$this->_seterror) {
-            error_reporting(E_ALL ^ E_NOTICE);
-        }
-        $this->_seterror++;
+        // if (!$this->_seterror) {
+        //     error_reporting(E_ALL ^ E_NOTICE);
+        // }
+        // $this->_seterror++;
 
         if (strncmp($filename, 'str:', 4) == 0) {
             $out = $this->_eval($this->fetch_str(substr($filename, 4)));
@@ -159,10 +159,10 @@ class EcsTemplate {
             }
         }
 
-        $this->_seterror--;
-        if (!$this->_seterror) {
-            error_reporting($this->_errorlevel);
-        }
+        // $this->_seterror--;
+        // if (!$this->_seterror) {
+        //     error_reporting($this->_errorlevel);
+        // }
 
         /* 增加模板标签 by ecmoban carson */
         $out = preg_replace('/__ROOT__/', __ROOT__, $out);
