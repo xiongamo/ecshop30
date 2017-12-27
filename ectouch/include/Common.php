@@ -1641,9 +1641,8 @@ if (! function_exists('get_img_url')){
  */
 if (! function_exists('get_full_content_img_url')){
     function get_full_content_img_url($content){
-        $domain = get_domain();
-        return preg_replace_callback('{(<img[^>]+src\s*=\s*")(.*?)(".*?[^>]*>)}i', function($match){
-            return $match[1].$domain.$match[2].$match[3];
+        return preg_replace_callback('{(<img\s+[^>]*\s*src\s*=\s*")(.*?)(".*?[^>]*>)}i', function($match){
+            return $match[1].get_image_path(0, $match[2]).$match[3];
         }, $content);
     }
 }

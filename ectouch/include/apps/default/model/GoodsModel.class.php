@@ -109,6 +109,8 @@ class GoodsModel extends BaseModel {
             $row['goods_thumb'] = get_image_path($goods_id, $row['goods_thumb'], true);
             $row['original_img'] = get_image_path($goods_id, $row['original_img'], true);
 
+            //商品描述
+            $row['goods_desc'] = get_full_content_img_url($row['goods_desc']);
             return $row;
         } else {
             return false;

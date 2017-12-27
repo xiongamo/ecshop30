@@ -36,13 +36,6 @@
 	<a href="{:url('user/get_password_phone')}">{$lang.forgot_password}</a>  
 	<a href="{:url('user/register')}">{$lang.free_registered}</a>
   </p>
-  <div class="ect-padding-lr ect-margin-tb user-hezuo">
-  	{$lang.third_login}
-  	<p>
-    	<a href="{:url('user/third_login',array('type'=>'qq'))}"><img src="__TPL__/images/qq.png"></a>
-        <a href="{:url('user/third_login',array('type'=>'sina'))}"><img src="__TPL__/images/weibo.png"></a>
-    </p>
-  </div>
   </div>
 <!-- #BeginLibraryItem "/library/search.lbi" --><!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
